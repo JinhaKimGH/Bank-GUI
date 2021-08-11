@@ -145,13 +145,13 @@ def home():
     password_entry1 = tk.Entry(window, justify='center', show="*")
     password_entry1.pack(pady=5)
 
-    login_b = tk.Button(window, text="Login", font=("Avenir", 15), bg="#A877BA", activebackground="black",
-                        activeforeground="#195ac2", width=15, height=2, command=login)
+    login_b = tk.Button(window, text="Login", font=("Avenir", 15), bg="#FF2D00", activebackground="#D42A06",
+                        width=15, height=2, command=login)
 
     login_b.pack(pady=10, padx=5)
 
-    register_b = tk.Button(window, text="Register", font=("Avenir", 15), bg="#A877BA", activebackground="black",
-                           activeforeground="#195ac2", width=15, height=2, command=register)
+    register_b = tk.Button(window, text="Register", font=("Avenir", 15), bg="#FF2D00", activebackground="#D42A06",
+                           width=15, height=2, command=register)
 
     register_b.pack(pady=10, padx=5)
 
@@ -204,35 +204,34 @@ def account_home(account):
     welcome_lbl = tk.Label(text="Welcome {} {}!".format(account.f_name, account.l_name), font=("Avenir", 25))
     welcome_lbl.pack(pady=20)
 
-    account_info_btn = tk.Button(window, text="Account Info", font=("Avenir", 15), bg="#A877BA",
-                                 activebackground="black",
-                                 activeforeground="#195ac2", width=15, height=2, command=lambda: account_info(account))
+    account_info_btn = tk.Button(window, text="Account Info", font=("Avenir", 15), bg="#FF2D00",
+                                 activebackground="#D42A06", width=15, height=2, command=lambda: account_info(account))
 
     account_info_btn.pack(pady=10)
 
-    deposit_btn = tk.Button(window, text="Deposit", font=("Avenir", 15), bg="#A877BA", activebackground="black",
-                            activeforeground="#195ac2", width=15, height=2, command=lambda: deposit(account))
+    deposit_btn = tk.Button(window, text="Deposit", font=("Avenir", 15), bg="#FF2D00", activebackground="#D42A06",
+                            width=15, height=2, command=lambda: deposit(account))
 
     deposit_btn.pack(pady=10, padx=5)
 
-    withdraw_btn = tk.Button(window, text="Withdraw", font=("Avenir", 15), bg="#A877BA", activebackground="black",
-                             activeforeground="#195ac2", width=15, height=2, command=lambda: withdraw(account))
+    withdraw_btn = tk.Button(window, text="Withdraw", font=("Avenir", 15), bg="#FF2D00", activebackground="#D42A06",
+                             width=15, height=2, command=lambda: withdraw(account))
 
     withdraw_btn.pack(pady=10, padx=5)
 
-    transfer_btn = tk.Button(window, text="Transfer", font=("Avenir", 15), bg="#A877BA", activebackground="black",
-                             activeforeground="#195ac2", width=15, height=2, command=lambda: transfer(account))
+    transfer_btn = tk.Button(window, text="Transfer", font=("Avenir", 15), bg="#FF2D00", activebackground="#D42A06",
+                             width=15, height=2, command=lambda: transfer(account))
 
     transfer_btn.pack(pady=10, padx=5)
 
-    view_bank_statement_btn = tk.Button(window, text="View Statement", font=("Avenir", 15), bg="#A877BA",
-                                        activebackground="black", activeforeground="#195ac2", width=15, height=2,
+    view_bank_statement_btn = tk.Button(window, text="View Statement", font=("Avenir", 15), bg="#FF2D00",
+                                        activebackground="#D42A06", width=15, height=2,
                                         command=lambda: view_bank_statement(account))
 
     view_bank_statement_btn.pack(pady=10, padx=5)
 
-    logout_btn = tk.Button(window, text="Logout", font=("Avenir", 15), bg="#A877BA", activebackground="black",
-                           activeforeground="#195ac2", width=15, height=2, command=home)
+    logout_btn = tk.Button(window, text="Logout", font=("Avenir", 15), bg="#FF2D00", activebackground="#D42A06",
+                           width=15, height=2, command=home)
 
     logout_btn.pack(pady=15, padx=5)
 
@@ -251,14 +250,13 @@ def deposit(account):
     d_amount_entry = tk.Entry(window, justify='center', selectborderwidth=10)
     d_amount_entry.pack()
 
-    deposit_b = tk.Button(window, text="Deposit", font=("Avenir", 15), bg="#A877BA", activebackground="black",
-                          activeforeground="#195ac2", width=15, height=2,
-                          command=lambda: deposit_action(d_amount_entry, account))
+    deposit_b = tk.Button(window, text="Deposit", font=("Avenir", 15), bg="#FF2D00", activebackground="#D42A06",
+                          width=15, height=2, command=lambda: deposit_action(d_amount_entry, account))
 
     deposit_b.pack(pady=10, padx=5)
 
-    back_btn = tk.Button(window, text="Back", font=("Avenir", 15), bg="#A877BA", activebackground="black",
-                         activeforeground="#195ac2", width=15, height=2, command=lambda: account_home(account))
+    back_btn = tk.Button(window, text="Back", font=("Avenir", 15), bg="#FF2D00", activebackground="#D42A06",
+                         width=15, height=2, command=lambda: account_home(account))
 
     back_btn.pack()
 
@@ -300,14 +298,13 @@ def withdraw(account):
     w_amount_entry = tk.Entry(window, justify='center', selectborderwidth=10)
     w_amount_entry.pack()
 
-    withdraw_b = tk.Button(window, text="Withdraw", font=("Avenir", 15), bg="#A877BA", activebackground="black",
-                           activeforeground="#195ac2", width=15, height=2,
-                           command=lambda: withdraw_action(w_amount_entry, account))
+    withdraw_b = tk.Button(window, text="Withdraw", font=("Avenir", 15), bg="#FF2D00", activebackground="#D42A06",
+                           width=15, height=2, command=lambda: withdraw_action(w_amount_entry, account))
 
     withdraw_b.pack(pady=10, padx=5)
 
-    back_btn = tk.Button(window, text="Back", font=("Avenir", 15), bg="#A877BA", activebackground="black",
-                         activeforeground="#195ac2", width=15, height=2, command=lambda: account_home(account))
+    back_btn = tk.Button(window, text="Back", font=("Avenir", 15), bg="#FF2D00", activebackground="#D42A06",
+                         width=15, height=2, command=lambda: account_home(account))
 
     back_btn.pack()
 
@@ -361,14 +358,13 @@ def transfer(account):
     t_account_entry = tk.Entry(window, justify='center', selectborderwidth=10)
     t_account_entry.pack()
 
-    transfer_b = tk.Button(window, text="Transfer", font=("Avenir", 15), bg="#A877BA", activebackground="black",
-                           activeforeground="#195ac2", width=15, height=2,
-                           command=lambda: transfer_action(t_amount_entry, account, t_account_entry))
+    transfer_b = tk.Button(window, text="Transfer", font=("Avenir", 15), bg="#FF2D00", activebackground="#D42A06",
+                           width=15, height=2, command=lambda: transfer_action(t_amount_entry, account, t_account_entry))
 
     transfer_b.pack(pady=10, padx=5)
 
-    back_btn = tk.Button(window, text="Back", font=("Avenir", 15), bg="#A877BA", activebackground="black",
-                         activeforeground="#195ac2", width=15, height=2, command=lambda: account_home(account))
+    back_btn = tk.Button(window, text="Back", font=("Avenir", 15), bg="#FF2D00", activebackground="#D42A06",
+                         width=15, height=2, command=lambda: account_home(account))
 
     back_btn.pack()
 
@@ -446,8 +442,8 @@ def account_info(account):
     balance_label = tk.Label(text="Balance: ${}".format(account.balance), font=("Avenir", 15))
     balance_label.pack(padx=5, pady=10)
 
-    back_btn = tk.Button(window, text="Back", font=("Avenir", 15), bg="#A877BA", activebackground="black",
-                         activeforeground="#195ac2", width=15, height=2, command=lambda: account_home(account))
+    back_btn = tk.Button(window, text="Back", font=("Avenir", 15), bg="#FF2D00", activebackground="#D42A06",
+                         width=15, height=2, command=lambda: account_home(account))
 
     back_btn.pack()
 
@@ -462,14 +458,13 @@ def view_bank_statement(account):
         transaction_lbl = tk.Label(text=transaction, font=("Avenir", 15))
         transaction_lbl.pack(pady=2)
 
-    download_btn = tk.Button(window, text="Download Statement", font=("Avenir", 15), bg="#A877BA",
-                             activebackground="black",
-                             activeforeground="#195ac2", width=20, height=2, command=account.bank_statement)
+    download_btn = tk.Button(window, text="Download Statement", font=("Avenir", 15), bg="#FF2D00",
+                             activebackground="#D42A06", width=20, height=2, command=account.bank_statement)
 
     download_btn.pack(pady=10)
 
-    back_btn = tk.Button(window, text="Back", font=("Avenir", 15), bg="#A877BA", activebackground="black",
-                         activeforeground="#195ac2", width=15, height=2, command=lambda: account_home(account))
+    back_btn = tk.Button(window, text="Back", font=("Avenir", 15), bg="#FF2D00", activebackground="#D42A06",
+                         width=15, height=2, command=lambda: account_home(account))
 
     back_btn.pack()
 
@@ -526,13 +521,13 @@ def register():
 
     registration_info.append(email_entry)
 
-    register_b = tk.Button(window, text="Register", font=("Avenir", 15), bg="#A877BA", activebackground="black",
-                           activeforeground="#195ac2", width=15, height=2, command=check_registration_info)
+    register_b = tk.Button(window, text="Register", font=("Avenir", 10), bg="#FF2D00", activebackground="#D42A06",
+                           width=10, height=2, command=check_registration_info)
 
     register_b.pack(pady=5)
 
-    back_btn = tk.Button(window, text="Back", font=("Avenir", 15), bg="#A877BA", activebackground="black",
-                         activeforeground="#195ac2", width=15, height=2, command=home)
+    back_btn = tk.Button(window, text="Back", font=("Avenir", 10), bg="#FF2D00", activebackground="#D42A06",
+                         width=10, height=2, command=home)
 
     back_btn.pack()
 
@@ -564,8 +559,8 @@ def check_registration_info():
 
         account_num_label.pack(pady=100)
 
-        next_btn = tk.Button(window, text="Next", font=("Avenir", 15), bg="#A877BA", activebackground="black",
-                             activeforeground="#195ac2", width=15, height=2, command=home)
+        next_btn = tk.Button(window, text="Next", font=("Avenir", 15), bg="#FF2D00", activebackground="#D42A06",
+                             width=15, height=2, command=home)
 
         next_btn.pack(pady=5, padx=5)
 
@@ -585,4 +580,3 @@ def main():
 
 
 main()
-
